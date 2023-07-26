@@ -8,7 +8,7 @@ class Question(models.Model):
 
     def __str__(self) -> str:
         # 자바의 toString()과 같음
-        return self.Question_text
+        return self.question_text
     
 
 # 선택 테이블
