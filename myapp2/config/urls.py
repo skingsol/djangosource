@@ -19,11 +19,12 @@ from django.urls import path, include
 from users.views import index
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
     path("app1/", include("app1.urls")),
     path("app2/", include("app2.urls")),
     path("users/", include("users.urls")),
-
     # http://127.0.0.1:8000/
-    path("",index, name="index"),
+    path("", index, name="index"),
+    # 장고가 제공하는 views(User) 확인
+    # path("accounts/", include("django.contrib.auth.urls")),
 ]

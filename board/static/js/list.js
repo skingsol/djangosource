@@ -10,6 +10,6 @@ document.querySelector(".pagination").addEventListener("click", (e) => {
   // 페이지 값이 있다면 페이지값을 업데이트하고 폼 제출
   if (href) {
     document.querySelector("#page").value = href;
-    document.querySelector('form[action=""]').submit();
+    document.querySelector("#actionForm").submit();
   }
 });

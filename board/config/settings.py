@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "board",
     "users",
-
 ]
 
 MIDDLEWARE = [
@@ -126,3 +125,9 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Login 성공 후 이동할 경로 지정
+LOGIN_REDIRECT_URL = "/"
+
+# Logout 성공 후 이동할 경로 지정
+LOGOUT_REDIRECT_URL = "/"
