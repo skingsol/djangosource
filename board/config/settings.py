@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-6+tubo7da@8#stuvevm$4f2=4v(+!&e&vrf^p1*3twipsz45@6"
+SECRET_KEY = "django-insecure-iylnyfi3n0x44dmn7zlfrzpn=4fr_rutl-1va80pm$x&ll@2hz"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "board",
     "users",
+    "django.contrib.humanize",
+    "blogs",
 ]
 
 MIDDLEWARE = [
@@ -118,7 +120,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
-# static 파일저장 경로 지정
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Default primary key field type
@@ -126,8 +127,13 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# Login 성공 후 이동할 경로 지정
+
+# LOGIN 성공 후 이동할 경로 지정
 LOGIN_REDIRECT_URL = "/"
 
-# Logout 성공 후 이동할 경로 지정
+# LOGOUT 성공 후 이동할 경로 지정
 LOGOUT_REDIRECT_URL = "/"
+
+# media 파일 저장 디렉토리 설정
+MEDIA_ROOT = Path(BASE_DIR, "media")
+MEDIA_URL = "/media/"

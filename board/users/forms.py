@@ -9,6 +9,7 @@ class UserForm(UserCreationForm):
     다른 정보를 받기 원한다면 추가 필요 ==> 새로운 클래스 작성
     """
 
+    # 부모가 내려줄때 email 은 널이 가능한 상태로 상속 됨 => required 상태로 사용하기 위해서 선언
     email = forms.EmailField(label="이메일")
 
     class Meta:
